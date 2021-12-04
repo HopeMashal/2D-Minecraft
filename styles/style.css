@@ -1,0 +1,193 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'mincraft';
+    src: url('../assets/fonts/Minecraft.ttf');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'mincraft', Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    background: #f6f6f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.menu {
+    width: 100%;
+    height: 100vh;
+    background: black url('../assets/images/menu.jpg') no-repeat center center/contain;
+    position: relative;
+}
+
+.menu__btn {
+    margin-top:480px;
+    margin-left: 450px;
+    background: linear-gradient(to bottom, rgba(185, 43, 39, 1), rgba(0, 0, 0, 1));
+    color: white;
+    font-family: 'mincraft';
+    font-size: 20px;
+    box-shadow: 1px 2px 3px white;
+    padding: 15px 30px;
+    z-index: 1;
+}
+
+.menu__btn:hover {
+    background: linear-gradient(to bottom, rgba(185, 43, 39, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+.game-area {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-area__game {
+    background: transparent;
+    width: 80%;
+    justify-content: center;
+}
+
+.tile {
+    height: 8vh;
+    width: 8vh;
+    transition: background 0.8s ease-in-out;
+    background: lightblue no-repeat center center/cover;
+}
+
+.tile:hover {
+    border: 1px solid white;
+}
+
+.tile[data-type="-1"] {
+    background: lightblue;
+}
+
+.tile[data-type="0"] {
+    background: url('../assets/images/tiles/dirt.png') no-repeat center center/cover;
+}
+
+.tile[data-type="1"] {
+    background: url('../assets/images/tiles/grass.png') no-repeat center center/cover;
+}
+
+.tile[data-type="2"] {
+    background: url('../assets/images/tiles/leaf.jpg') no-repeat center center/cover;
+}
+
+.tile[data-type="3"] {
+    background: url('../assets/images/tiles/tree.png') no-repeat center center/cover;
+}
+
+.tile[data-type="4"] {
+    background: url('../assets/images/tiles/rock.png') no-repeat center center/cover;
+}
+
+.tile[data-type="5"] {
+    background: white;
+}
+
+.tools-sidebar {
+    background: #333333;
+    width: 20vw;
+    padding: 50px 10px;
+    color: white;
+}
+
+.tool {
+    padding: 10px;
+    padding-bottom: 2px;
+    text-align: center;
+    width: 50%;
+    font-size: 0.9em;
+    border: 2px solid white;
+}
+
+.tool:hover {
+    background: blue;
+    border-color: blue;
+}
+
+.tool.active {
+    background: blue;
+    border-color: blue;
+}
+
+.tool.active.warning {
+    background: red;
+    border-color: red;
+}
+
+.tool .img {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+    background-size: contain;
+}
+
+.tool[data-tool="1"]>.img {
+    background: url('../assets/images/tools/shovel.png') no-repeat center center/contain;
+}
+
+.tool[data-tool="0"]>.img {
+    background: url('../assets/images/tools/pickaxe.png') no-repeat center center/contain;
+}
+
+.tool[data-tool="2"]>.img {
+    background: url('../assets/images/tools/axe.png') no-repeat center center/contain;
+}
+
+.tools-sidebar__toolsList {
+    display: grid;
+    justify-items: center;
+    grid-gap: 2rem;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.tools-sidebar__lastMindedTile {
+    width: 8vh;
+    height: 8vh;
+    border: 2px solid white;
+}
+
+.tools-sidebar__lastMindedTile[data-type="-1"] {
+    background: transparent;
+}
+
+.tools-sidebar__lastMindedTile[data-type="0"] {
+    background: url('../assets/images/tiles/dirt.png') no-repeat center center/cover;
+}
+
+.tools-sidebar__lastMindedTile[data-type="1"] {
+    background: url('../assets/images/tiles/grass.png') no-repeat center center/cover;
+}
+
+.tools-sidebar__lastMindedTile[data-type="2"] {
+    background: url('../assets/images/tiles/leaf.jpg') no-repeat center center/cover;
+}
+
+.tools-sidebar__lastMindedTile[data-type="3"] {
+    background: url('../assets/images/tiles/tree.png') no-repeat center center/cover;
+}
+
+.tools-sidebar__lastMindedTile[data-type="4"] {
+    background: url('../assets/images/tiles/rock.png') no-repeat center center/cover;
+}
