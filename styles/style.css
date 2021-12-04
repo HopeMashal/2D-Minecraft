@@ -35,8 +35,8 @@ body {
 }
 
 .menu__btn {
-    margin-top:480px;
-    margin-left: 450px;
+    margin-top:83vh;
+    margin-left: 35vw;
     background: linear-gradient(to bottom, rgba(185, 43, 39, 1), rgba(0, 0, 0, 1));
     color: white;
     font-family: 'mincraft';
